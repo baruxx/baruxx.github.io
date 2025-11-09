@@ -1,0 +1,26 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+:root {
+  color-scheme: light;
+}
+
+body {
+  /* smooth gradient background and gentle backdrop for components */
+  background: linear-gradient(180deg, rgb(12 18 33) 0%, rgba(14,23,42,1) 100%);
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  color: theme("colors.foreground");
+  @apply text-foreground;
+  transition: background-color 300ms ease, color 300ms ease;
+}
+
+a {
+  @apply underline-offset-4;
+}
+
+::selection {
+  background: rgba(124, 58, 237, 0.18); /* soft accent selection */
+  color: white;
+}
